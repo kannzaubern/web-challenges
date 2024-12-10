@@ -8,6 +8,10 @@
   --color-granite: #252629;
   --color-nemo: #ff4a11;
   --color-foam: #ffffff;
+  --border-radius: 4px;
+  --letter-spacing: 0.025em;
+  --spacing-min: 8px;
+  --spacing-max: 16px;
 }
 
 body {
@@ -25,13 +29,13 @@ h1 {
   color: var(--color-foam);
   line-height: 1.4;
   margin: 0;
-  letter-spacing: 0.025em;
+  letter-spacing: var(--letter-spacing);
   text-transform: uppercase;
-  padding-block: 16px;
+  padding-block: var(--spacing-max);
 }
 
 h2 {
-  letter-spacing: 0.025em;
+  letter-spacing: var(--letter-spacing);
 }
 
 strong {
@@ -42,7 +46,7 @@ section {
   display: flex;
   flex-wrap: wrap;
   gap: 32px;
-  padding: 16px;
+  padding: var(--spacing-max);
   width: min(1000px, 100%);
   margin: 0 auto;
 }
@@ -64,7 +68,7 @@ figure {
   margin: 0;
   padding: 10px;
   background-color: var(--color-nemo);
-  border-radius: 4px;
+  border-radius: var(--border-radius);
 }
 
 figcaption {
@@ -74,14 +78,14 @@ figcaption {
 nav {
   display: flex;
   flex-wrap: wrap;
-  gap: 8px 16px;
+  gap: var(--spacing-min) 16px;
 }
 
 a {
   display: inline-block;
   font-size: smaller;
-  padding: 8px;
-  border-radius: 4px;
+  padding: var(--spacing-min);
+  border-radius: var(--border-radius);
   background-color: var(--color-nemo);
   color: var(--color-foam);
 }
@@ -95,8 +99,8 @@ a:focus-visible {
 mark {
   background-color: var(--color-nemo);
   color: var(--color-foam);
-  border-radius: 4px;
-  letter-spacing: 0.025em;
+  border-radius: var(--border-radius);
+  letter-spacing: var(--letter-spacing);
 }
 
 ::selection {
