@@ -1,0 +1,25 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: system-ui;
+  color: green;
+}
+
+h1 {
+  /* make all headings blue and font size 2rem */
+  color: blue;
+  font-size: 2rem;
+}
+
+.introduction {
+  font-style: italic;
+  border: 1px solid;
+  border-radius: 90px;
+  padding: 10px;
+}
+
+a:hover {
+  color: hotpink;
+}
