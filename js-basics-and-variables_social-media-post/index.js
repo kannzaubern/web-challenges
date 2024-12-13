@@ -11,6 +11,13 @@ console.clear();
 
 // --v-- write your code here --v--
 
+const postTitle = "Hello World";
+const postContent =
+  "Join our Web Development Class now and set off 2025 the right way. More info on our profile";
+const numberOfLikes = 241;
+const nameUserCreator = "Jonathan Smith";
+const isReported = true;
+
 // --^-- write your code here --^--
 
 /*
@@ -18,5 +25,9 @@ console.clear();
 */
 
 // --v-- write your code here --v--
-
+console.log("postTitle: ", postTitle);
+console.log("postContent: ", postContent);
+console.log("numberOfLikes: ", numberOfLikes);
+console.log("nameUserCreator: ", nameUserCreator);
+console.log("isReported: ", isReported);
 // --^-- write your code here --^--
