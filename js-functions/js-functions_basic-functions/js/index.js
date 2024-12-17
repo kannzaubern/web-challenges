@@ -9,6 +9,10 @@ console.clear();
 */
 
 // --v-- write your code here --v--
+const bookTitle = "Infinite Jest";
+const nameAuthor = "David Foster Wallace";
+let bookRating = 4.2;
+let copiesSold = 1204;
 
 // --^-- write your code here --^--
 
@@ -27,6 +31,18 @@ Then:
 */
 
 // --v-- write your code here --v--
+console.log("Book title: ", bookTitle);
+console.log("Author name: ", nameAuthor);
+console.log("Rating: ", bookRating);
+console.log("Sold copies: ", copiesSold);
+
+copiesSold += 200;
+bookRating = 3.9;
+
+console.log("Book title: ", bookTitle);
+console.log("Author name: ", nameAuthor);
+console.log("Rating: ", bookRating);
+console.log("Sold copies: ", copiesSold);
 
 // --^-- write your code here --^--
 
@@ -41,4 +57,16 @@ Then:
 
 // --v-- write your code here --v--
 
+function logBookData() {
+  console.log("Book title: ", bookTitle);
+  console.log("Author name: ", nameAuthor);
+  console.log("Rating: ", bookRating);
+  console.log("Sold copies: ", copiesSold);
+}
+
+copiesSold += 500;
+logBookData();
+
+copiesSold += 220;
+logBookData();
 // --^-- write your code here --^--
