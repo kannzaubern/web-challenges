@@ -14,11 +14,19 @@ function showTosError() {
 
 form.addEventListener("submit", (event) => {
   event.preventDefault();
-
   // --v-- write your code here --v--
-
+  if (tosCheckbox.checked) {
+    hideTosError;
+    return;
+  }
+  showTosError;
   // --^-- write your code here --^--
+});
 
-  // eslint-disable-next-line no-alert
-  alert("Form submitted");
+tosCheckbox.addEventListener("input", () => {
+  if (tosCheckbox.checked) {
+    hideTosError();
+  } else {
+    showTosError();
+  }
 });
