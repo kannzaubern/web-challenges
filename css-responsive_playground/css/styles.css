@@ -61,8 +61,7 @@ h1 {
 
 .box--one {
   background-color: lightblue;
-
-  width: 100px;
+  width: 50%;
   height: 100px;
 }
 
@@ -93,4 +92,33 @@ h1 {
 
 .box--five img {
   width: 100%;
+}
+
+@media screen and (min-width: 599px) {
+  /*  Change width to 200px when the viewport is wider than 599px */
+  .box--two {
+    width: 200px;
+  }
+}
+
+@media screen and (min-width: 1199px) {
+  /*  Change width to 400px when the viewport is wider than 1199px */
+  .box--two {
+    width: 400px;
+  }
+}
+
+@media (orientation: landscape) {
+  /*  Make flat when viewed in landscape mode */
+  .box--three {
+    height: 50px;
+    width: 250px;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  /*  Change bg color when viewed in landscape mode */
+  .box--four {
+    background-color: #ff4a11;
+  }
 }
