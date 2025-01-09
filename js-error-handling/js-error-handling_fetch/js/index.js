@@ -5,9 +5,13 @@ const userElement = document.querySelector("[data-js='user']");
 const errorElement = document.querySelector("[data-js='error']");
 
 async function fetchUserData(url) {
+  errorElement.textContent = "";
   try {
     const response = await fetch(url);
-
+    if (response.status === 404) {
+      errorElement.textContent = "Error 404: User not found.";
+      return;
+    }
     return await response.json();
   } catch (error) {
     return { error: error.message };
