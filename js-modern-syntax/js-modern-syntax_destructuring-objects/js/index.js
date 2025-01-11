@@ -12,6 +12,9 @@ const company = {
   location: "Hamburg",
 };
 
+const { name } = company;
+console.log("Company Name:", name);
+
 // Example: export const { value1 } = myObject;
 
 /*
@@ -24,7 +27,11 @@ Use destructuring to extract the following:
       Set a default value of `false` if `isAdmin` is not present.
 */
 
-const user = { name: "John", years: 30 };
+const user = { userName: "John", years: 30 };
+const { userName, years: age } = user;
+const { isAdmin = false } = user;
+
+console.log(userName, "is", age, "years old. Admin:", isAdmin);
 
 /*
 EXERCISE 3
@@ -34,9 +41,12 @@ rename them as `dogName`, `dogBreed`, and `dogAge`, respectively.
 
 const dog = {
   name: "Pluto",
-  breed: "husky",
+  breed: "Husky",
   age: 5,
 };
+
+const { name: dogName, breed: dogBreed, age: dogAge } = dog;
+console.log(dogName, "is a", dogBreed, "and", dogAge, "years old.");
 
 /*
 EXERCISE 4
@@ -50,6 +60,9 @@ const person = {
   firstName: "Alex",
 };
 
+const { lastName: personLastName, ...moreInformation } = person;
+console.log("Last name:", personLastName, "Other properties:", moreInformation);
+
 /*
 EXERCISE 5
 Refactor the following function to use destructuring assignment for the
@@ -57,11 +70,18 @@ three variables `name`, `country` and `numPeople`.
 Hint: You may need to rename one property during destructuring.
 */
 
+/*
 export function logInfo(city) {
   const name = city.name;
   const country = city.country;
   const numPeople = city.population;
 
+  return `${name} is in ${country} and has ${numPeople} inhabitants in it.`;
+}
+*/
+
+export function logInfo(city) {
+  const { name, country, population: numPeople } = city;
   return `${name} is in ${country} and has ${numPeople} inhabitants in it.`;
 }
 
