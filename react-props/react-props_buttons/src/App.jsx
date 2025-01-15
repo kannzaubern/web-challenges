@@ -1,3 +1,10 @@
 export default function App() {
-  return <h1>Replace me with your component!</h1>;
+  return <Button color = #239129 text = "Submit" />;
+
+export function Button({ color, disabled, text }) {
+  return (
+    <button style={{ backgroundColor: color }} disabled={disabled}>
+      {text}
+    </button>
+  );
 }
