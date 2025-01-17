@@ -1,7 +1,8 @@
+import { useState } from "react";
 import "./styles.css";
 
 export default function App() {
-  let code = "?";
+  let [code, setCode] = useState("?");
 
   const validCode = "🐡🐠🐋";
 
@@ -16,6 +17,7 @@ export default function App() {
         <button
           type="button"
           onClick={() => {
+            setCode((code = "🐡"));
             handleClick("🐡");
           }}
         >
@@ -26,6 +28,7 @@ export default function App() {
         <button
           type="button"
           onClick={() => {
+            setCode((code += "🐋"));
             handleClick("🐋");
           }}
         >
@@ -36,6 +39,7 @@ export default function App() {
         <button
           type="button"
           onClick={() => {
+            setCode((code += "🐠"));
             handleClick("🐠");
           }}
         >
@@ -48,6 +52,7 @@ export default function App() {
       <button
         type="button"
         onClick={() => {
+          setCode((code = ""));
           console.log("Reset Code!");
         }}
       >
