@@ -12,7 +12,7 @@ In this challenge, you will begin building a journal app, which will be expanded
   - Remember: You can toggle a boolean using the NOT operator `!`.
 
 > 💡For now, only the icon will respond to the state change using conditional rendering:
-`{isFavorite ? <StarFilled /> : <Star />}`. The favorite tab and the count of favorites will be implemented in future sessions.
+> `{isFavorite ? <StarFilled /> : <Star />}`. The favorite tab and the count of favorites will be implemented in future sessions.
 
 Happy hacking!
 
