@@ -5,9 +5,17 @@ import Box from "./components/Box";
 export default function App() {
   return (
     <main className="flex-container">
-      <Box color="#007bff" />
-      <Box color="#fc3" />
-      <Box color="#ff3333" />
+      <Boxes />
     </main>
+  );
+}
+
+export function Boxes({ color }) {
+  return (
+    <>
+      <Box color="#ff0000" />
+      <Box color="#fc3" />
+      <Box color="#239129" />
+    </>
   );
 }
