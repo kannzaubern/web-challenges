@@ -69,6 +69,10 @@ let exampleString = "alibaba";
 
 function countOccuringCharacters(string) {
   let characterCountObject = {};
+  if (string === "") {
+    return {}; // Return an empty object if the string is empty
+  }
+
   for (let i = 0; i < string.length; i++) {
     if (string[i] in characterCountObject) {
       characterCountObject[string[i]] += 1;
